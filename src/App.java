@@ -1,5 +1,9 @@
 public class App {
     public static void main(String[] args) throws Exception {
+        MotoAcuatica moto1 = new MotoAcuatica("LDA432", "RXT ", "Sea-Doo");
+        System.out.println(moto1.getIdentificador());
+
+
         // System.out.println("Hello, World!");
         // DECLARACIÓN DE VARIABLES PRIMITIVAS 
 
@@ -17,7 +21,7 @@ public class App {
  */
         // Aqui hago un comentario para la rama 2  y el push 2 
         // Aqui hago un comentario nuevo para la rama 2 y el push 3 
-        System.out.println("Hola a todos");
+        System.out.println("Hola a todos, c+omo están ?");
         
         // Otro comentario
         // Un comentario más !!
