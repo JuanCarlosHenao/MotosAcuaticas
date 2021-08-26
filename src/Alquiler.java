@@ -37,13 +37,20 @@ public class Alquiler {
     }
 
 
-/*     public int calcularCosto (){
+    public  int calcularCosto (){
 
-        // return "";
+        if (cliente.getEdad() < 18) {
+            int costoAlquiler=0;
+            return costoAlquiler;
+        }else {
+            int costoAlquiler=-1;
+            return costoAlquiler;
+        }
+
 
     }
     
- */
+
     
     
 }

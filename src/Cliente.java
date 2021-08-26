@@ -1,7 +1,11 @@
 public class Cliente {
-    private String Cedula;
-    private int Edad;
-    private String Nombre;
+    private String cedula;
+    private int edad;
+    private String nombre;
 
 
+
+    public int getEdad(){
+        return this.edad;
+    }
 }
