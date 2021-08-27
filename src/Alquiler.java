@@ -6,11 +6,11 @@ import java.text.SimpleDateFormat;
 
 public class Alquiler {
 
-    private int id;
-    private Cliente cliente;
-    private MotoAcuatica moto;
-    private Date fecha;
-    private int horasAlquiler;
+    private int Id;
+    private Cliente Cliente;
+    private MotoAcuatica Moto;
+    private Date Fecha;
+    private int HorasAlquiler;
   
 
 
@@ -18,69 +18,59 @@ public class Alquiler {
     //NOTAS : Revisar en los constructories qué tipo de cosa se da
 
     //Constructor 1 
-    public Alquiler(int id, MotoAcuatica moto, Cliente cliente, int horasAlquiler){
-        this.id=id;
-        this.cliente=cliente;
-        this.moto=moto;
-        // this.Fecha=Date.from(ho) mirar como se coloca la fecha de hoy 
-        this.horasAlquiler=horasAlquiler;
+    public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler) throws ParseException{
+        this.Id=Id;
+        this.Cliente=Cliente;
+        this.Moto=moto;
+        
+        
+        // Date date = new Date(); // This object contains the current date value
+        // System.out.println(formatter.format(date));
+        // Date date= new Date ();
+        
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        // Date date=new Date();
+        this.Fecha=new Date();
+        // System.out.println( formatter.format(this.Fecha)); // Recibe una fecha y la pasa String 
+        // this.Fecha=formatter.parse(new Date ().toString());
+        // this.Fecha=formatter.format(this.Fecha);
+        this.HorasAlquiler=horasAlquiler;
 
 
     }
 
     //Constructor 2
-    public Alquiler(int id, MotoAcuatica moto, Cliente cliente, int horasAlquiler, Date fecha){
-        this.id=id;
-        this.cliente=cliente;
-        this.moto=moto;
-        this.horasAlquiler=horasAlquiler;
+    public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
+        this.Id=Id;
+        this.Cliente=Cliente;
+        this.Moto=moto;
+        this.HorasAlquiler=horasAlquiler;
         // SimpleDateFormat dateFormat = new SimpleDateFormat ("dd-MM-yyyy");  
-
-        try {
-            SimpleDateFormat dateFormat = new SimpleDateFormat ("yyyy-MM-dd");
-            Date date1 = dateFormat.parse("2019-09-16");
-            // Date date2 = dateFormat.parse("2020-01-25");
-            // System.out.println("Date-1: " + 
-            //                    dateFormat.format(date1));
-            // System.out.println("Date-2: " +
-            //                    dateFormat.format(date2));
-            // if(date1.before(date2)){
-            //     System.out.println(
-            //         "Date-1 is before Date-2");
-            // } 
-            this.fecha=date1;
-        } catch (ParseException ex) {
-        }
-
+        this.Fecha=fecha;
+            
+    
         
 
     }
 
 
-    
+
+
+
 
     public Cliente getCliente() {
-        return cliente;
+        return Cliente;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
 
     public MotoAcuatica getMoto() {
-        return moto;
+        return Moto;
     }
 
-    public void setMoto(MotoAcuatica moto) {
-        this.moto = moto;
-    }
+
 
     public Date getFecha() {
-        return fecha;
-    }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+        return Fecha;
     }
 
 
@@ -89,12 +79,12 @@ public class Alquiler {
         int valueHour=0;
 
 
-        if (cliente.getEdad() < 18) {
+        if (Cliente.getEdad() < 18) {
              return 0;
         }else {
 
             // Double costoAlquiler=0;
-            String firstLetter = moto.getIdentificador().substring(0,1); // Sacar la letra del primer caracater
+            String firstLetter = Moto.getIdentificador().substring(0,1); // Sacar la letra del primer caracater
 
 
             if(firstLetter.equals("L")  || firstLetter.equals("l"))
@@ -113,28 +103,33 @@ public class Alquiler {
                 {
                     valueHour = 50000;
                 }
-            costoAlquiler = this.horasAlquiler*valueHour;
+            costoAlquiler = this.HorasAlquiler*valueHour;
             return costoAlquiler;
 
         }
-
-
     }
 
-
-   /*  public int VentasPorRangoDias(Alquiler[] alquileres, Date min, Date max){
+    public static int VentasPorDias(Alquiler[] alquileres, Date min, Date max){
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
+        // String minima= formatter.format(min);
+        // String maxima=formatter.format(max);
+        int acumulateCost= 0;
         for (int i = 0; i < alquileres.length; i++) {
-            if (alquileres[i].getFecha()min && alquileres[i].getFecha()<max){
+            if ((alquileres[i].getFecha().after(min)) &&  (alquileres[i].getFecha().before(max)))
+            {
+                acumulateCost=acumulateCost+alquileres[i].calcularCosto();
+
+
+
 
             }
             
         }
-        
-        return
+
+        return acumulateCost;
+
     }
 
-
- */
 
 
 
@@ -158,7 +153,7 @@ public class Alquiler {
 
 public double CalcularCosto()
 {
-    if(this.EsValido())
+    if(this.EsValIdo())
     {
         String letra;
         int vlrhora = 0;
@@ -186,7 +181,7 @@ public double CalcularCosto()
     }
 }
 
-public boolean EsValido()
+public boolean EsValIdo()
     {
         Calendar calendario = Calendar.getInstance();
         

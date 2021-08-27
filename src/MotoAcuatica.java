@@ -1,34 +1,36 @@
 public class MotoAcuatica {
-    private String identificador;
-    private String modelo;
-    private String marca;
+    private String Identificador;
+    private String Modelo;
+    private String Marca;
 
 
     
 
     public MotoAcuatica(String identificador, String modelo, String marca) {
-        this.identificador = identificador;
-        this.modelo = modelo;
-        this.marca = marca;
+        this.Identificador = identificador;
+        this.Modelo = modelo;
+        this.Marca = marca;
     }
+
+
+
+
     public String getIdentificador() {
-        return identificador;
+        return Identificador;
     }
-    public void setIdentificador(String identificador) {
-        this.identificador = identificador;
-    }
+
     public String getModelo() {
-        return modelo;
+        return Modelo;
     }
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
+
     public String getMarca() {
-        return marca;
+        return Marca;
     }
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
+
+
+
+
+    
 
     
 

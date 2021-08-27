@@ -1,34 +1,46 @@
 public class Cliente {
-    private String cedula;
-    private int edad;
-    private String nombre;
+    private String Cedula;
+    private int Edad;
+    private String Nombre;
 
 
 
     
     public Cliente(String cedula, int edad, String nombre) {
-        this.cedula = cedula;
-        this.edad = edad;
-        this.nombre = nombre;
+        this.Cedula = cedula;
+        this.Edad = edad;
+        this.Nombre = nombre;
     }
+
+
+
+
     public String getCedula() {
-        return cedula;
+        return Cedula;
     }
-    public void setCedula(String cedula) {
-        this.cedula = cedula;
-    }
+
+
+
+
+
+
     public int getEdad() {
-        return edad;
+        return Edad;
     }
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
+
+
+
+
+
+
+
+
+
     public String getNombre() {
-        return nombre;
+        return Nombre;
     }
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+
+
 
 
 
