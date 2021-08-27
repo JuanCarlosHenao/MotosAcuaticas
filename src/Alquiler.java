@@ -1,6 +1,5 @@
 
 import java.util.Date;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 
@@ -18,8 +17,8 @@ public class Alquiler {
     //NOTAS : Revisar en los constructories qué tipo de cosa se da
 
     //Constructor 1 
-    public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler) throws ParseException{
-        this.Id=Id;
+    public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler) {
+        this.Id=id;
         this.Cliente=Cliente;
         this.Moto=moto;
         
@@ -41,7 +40,7 @@ public class Alquiler {
 
     //Constructor 2
     public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
-        this.Id=Id;
+        this.Id=id;
         this.Cliente=Cliente;
         this.Moto=moto;
         this.HorasAlquiler=horasAlquiler;
@@ -115,12 +114,10 @@ public class Alquiler {
         // String maxima=formatter.format(max);
         int acumulateCost= 0;
         for (int i = 0; i < alquileres.length; i++) {
-            if ((alquileres[i].getFecha().after(min)) &&  (alquileres[i].getFecha().before(max)))
+            Date fecha=alquileres[i].getFecha();
+            if ((fecha.after(min)) &&  (fecha.before(max))  || (fecha.compareTo(min)==0) || (fecha.compareTo(max)==0) )
             {
                 acumulateCost=acumulateCost+alquileres[i].calcularCosto();
-
-
-
 
             }
             
