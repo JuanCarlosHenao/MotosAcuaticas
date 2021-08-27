@@ -51,59 +51,59 @@ public class App {
 
             // prueba 3
             
-            MotoAcuatica moto2 = new MotoAcuatica("LDA432", "RXT ", "Sea-Doo");
-            System.out.println(moto2.getIdentificador());
-            Cliente cliente2= new Cliente ("10009931", 20, "Charlie");
-            System.out.println("La cédula del cliente es " +cliente2.getCedula());
-
-            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler){       
-            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
-
-            // SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
-            Date fecha2 = formatter.parse("18-07-2021"); // Creo la fecha nueva 
-            
-            Alquiler alquiler2=new Alquiler(1, cliente2, moto2, fecha2, 1);
-            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler2.getFecha())); // PAsa la fecha a String con formato 
-            System.out.println("El costo del alquiler para "+cliente2.getNombre()+" es "+alquiler2.calcularCosto()); 
-
-            System.out.println();
-
-
-                                    // prueba 2
-            
-            MotoAcuatica moto2 = new MotoAcuatica("LDA432", "RXT ", "Sea-Doo");
-            System.out.println(moto2.getIdentificador());
-            Cliente cliente2= new Cliente ("10009931", 20, "Charlie");
-            System.out.println("La cédula del cliente es " +cliente2.getCedula());
-
-            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler){       
-            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
-
-            // SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
-            Date fecha2 = formatter.parse("18-07-2021"); // Creo la fecha nueva 
-            
-            Alquiler alquiler2=new Alquiler(1, cliente2, moto2, fecha2, 2);
-            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler2.getFecha())); // PAsa la fecha a String con formato 
-            System.out.println("El costo del alquiler para "+cliente2.getNombre()+" es "+alquiler2.calcularCosto()); 
-
-            System.out.println();
-
-            // prueba 3
-
-            MotoAcuatica moto3 = new MotoAcuatica("LDA432", "RXT ", "Sea-Doo");
-            System.out.println(moto2.getIdentificador());
+            MotoAcuatica moto3 = new MotoAcuatica("PDA432", "RXT ", "Sea-Doo");
+            System.out.println(moto3.getIdentificador());
             Cliente cliente3= new Cliente ("10009931", 20, "Charlie");
-            System.out.println("La cédula del cliente es " +cliente2.getCedula());
+            System.out.println("La cédula del cliente es " +cliente3.getCedula());
 
             // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler){       
             // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
 
             // SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
-            Date fecha2 = formatter.parse("18-07-2021"); // Creo la fecha nueva 
+            Date fecha3 = formatter.parse("19-07-2021"); // Creo la fecha nueva 
             
-            Alquiler alquiler2=new Alquiler(1, cliente2, moto2, fecha2, 1);
-            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler2.getFecha())); // PAsa la fecha a String con formato 
-            System.out.println("El costo del alquiler para "+cliente2.getNombre()+" es "+alquiler2.calcularCosto()); 
+            Alquiler alquiler3=new Alquiler(6, cliente3, moto3, fecha3, 4);
+            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler3.getFecha())); // PAsa la fecha a String con formato 
+            System.out.println("El costo del alquiler para "+cliente3.getNombre()+" es "+alquiler3.calcularCosto()); 
+
+            System.out.println();
+
+
+            // prueba 4
+            
+            MotoAcuatica moto4 = new MotoAcuatica("FDA432", "RXT ", "Sea-Doo");
+            System.out.println(moto4.getIdentificador());
+            Cliente cliente4= new Cliente ("10009931", 20, "Charlie");
+            System.out.println("La cédula del cliente es " +cliente4.getCedula());
+
+            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler){       
+            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
+
+            // SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
+            Date fecha4 = formatter.parse("14-07-2021"); // Creo la fecha nueva 
+            
+            Alquiler alquiler4=new Alquiler(0, cliente4, moto4, fecha4, 3);
+            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler4.getFecha())); // PAsa la fecha a String con formato 
+            System.out.println("El costo del alquiler para "+cliente4.getNombre()+" es "+alquiler4.calcularCosto()); 
+
+            System.out.println();
+
+            // prueba 5
+
+            MotoAcuatica moto5 = new MotoAcuatica("DDA432", "RXT ", "Sea-Doo");
+            System.out.println(moto5.getIdentificador());
+            Cliente cliente5= new Cliente ("10009931", 20, "Charlie");
+            System.out.println("La cédula del cliente es " +cliente5.getCedula());
+
+            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,int horasAlquiler){       
+            // public Alquiler(int id, Cliente Cliente, MotoAcuatica moto,Date fecha ,int horasAlquiler){
+
+            // SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy"); // Le doy el formato a la fecha 
+            Date fecha5 = formatter.parse("18-07-2021"); // Creo la fecha nueva 
+            
+            Alquiler alquiler5=new Alquiler(1, cliente5, moto5, fecha5, 1);
+            System.out.println("La fecha del alquiler 1 es: "+formatter.format(alquiler5.getFecha())); // PAsa la fecha a String con formato 
+            System.out.println("El costo del alquiler para "+cliente5.getNombre()+" es "+alquiler5.calcularCosto()); 
 
             System.out.println();
                     
